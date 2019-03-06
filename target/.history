@@ -1,0 +1,6 @@
+compile
+reload
+update
+compile
+ls
+exit

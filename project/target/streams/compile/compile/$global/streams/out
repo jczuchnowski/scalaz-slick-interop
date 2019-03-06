@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/giacomo/projects/scalaz/scalaz-slick-interop/scalaz-slick-interop/project/Dependencies.scala:4:18: not found: value -[0m
+[0m[[0m[31merror[0m] [0m[0m  lazy val scalaz-zio = "org.scalaz"         %% "scalaz-zio" % "1.0-RC1"[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

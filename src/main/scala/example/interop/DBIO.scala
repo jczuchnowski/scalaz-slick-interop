@@ -1,9 +1,11 @@
 package example.interop
 
 import scalaz.zio.{ IO, UIO, ZIO }
-import slick.driver.H2Driver.api._
-
-import scala.concurrent.ExecutionContext
+import scalaz.zio.interop.reactiveStreams._
+import scalaz.zio.stream.ZStream
+import slick.basic.DatabasePublisher
+import slick.dbio.{ DBIO, StreamingDBIO }
+import slick.jdbc.JdbcBackend.Database
 
 trait DatabaseProvider {
   def databaseProvider: DatabaseProvider.Service
@@ -11,17 +13,23 @@ trait DatabaseProvider {
 
 object DatabaseProvider {
   trait Service {
-    def getDb(): UIO[Database]
+    def db: UIO[Database]
   }
 }
 
 object dbio {
 
   implicit class IOObjOps(private val obj: IO.type) extends AnyVal {
-    def fromDBIO[A](dbio: DBIO[A]): ZIO[DatabaseProvider, Throwable, A] =
+    def fromDBIO[R](dbio: DBIO[R]): ZIO[DatabaseProvider, Throwable, R] =
       for {
-        db <- ZIO.accessM[DatabaseProvider, Nothing, Database](_.databaseProvider.getDb())
+        db <- ZIO.accessM[DatabaseProvider](_.databaseProvider.db)
         r  <- ZIO.fromFuture(ec => db.run(dbio))
+      } yield r
+
+    def fromStreamingDBIO[T](dbio: StreamingDBIO[_, T]): ZIO[DatabaseProvider, Throwable, ZStream[Any, Throwable, T]] =
+      for {
+        db <- ZIO.accessM[DatabaseProvider](_.databaseProvider.db)
+        r  <- ZIO.effect(db.stream(dbio).toStream())
       } yield r
   }
 

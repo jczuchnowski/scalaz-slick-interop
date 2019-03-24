@@ -10,9 +10,12 @@ lazy val root = (project in file("."))
     name := "scalaz-slick-interop",
     libraryDependencies ++= Seq(
       scalazZio,
+      scalazZioRS,
       slick,
-      scalaTest % Test
+      scalaTest % Test,
+      h2 % Test
     )
   )
+
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

@@ -9,245 +9,193 @@
 		extra-sbtVersion="1.0"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190305180051"/>
+		date="20190323160326"/>
 	<dependencies>
-		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.7" status="release" pubdate="20180927103203" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.7/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
-				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2637" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.7/scala-reflect-2.12.7.pom"/>
-				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.6.2"/>
-				<artifacts>
-					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3616372" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.7.jar">
-						<origin-location is-local="false" location="UNKNOWN"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20190305180043" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.0" status="integration" pubdate="20190323160325" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="default" name="scalaz-slick-interop-build" conf="compile" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.ensime" name="sbt-ensime">
-			<revision name="2.5.1" status="release" pubdate="20180327112320" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/ensime/ensime-sbt" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="16">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3404" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/org.ensime/sbt-ensime/ivy-2.5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ensime/sbt-ensime_2.12_1.0/2.5.1/sbt-ensime-2.5.1.pom"/>
-				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="2.5.1" rev-constraint-default="2.5.1" rev-constraint-dynamic="2.5.1" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+		<module organisation="com.jsuereth" name="sbt-pgp">
+			<revision name="1.1.1" status="release" pubdate="20180305002434" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+				<metadata-artifact status="no" details="" size="1621" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/com.jsuereth/sbt-pgp/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jsuereth/sbt-pgp/scala_2.12/sbt_1.0/1.1.1/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
-					<artifact name="sbt-ensime" type="jar" ext="jar" status="no" details="" size="10401627" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/org.ensime/sbt-ensime/jars/sbt-ensime-2.5.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ensime/sbt-ensime_2.12_1.0/2.5.1/sbt-ensime-2.5.1.jar"/>
+					<artifact name="sbt-pgp" type="jar" ext="jar" status="no" details="" size="200982" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/com.jsuereth/sbt-pgp/jars/sbt-pgp-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jsuereth/sbt-pgp/scala_2.12/sbt_1.0/1.1.1/jars/sbt-pgp.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.dwijnand" name="sbt-compat">
-			<revision name="1.0.0" status="release" pubdate="20170822092611" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/dwijnand/sbt-compat" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*)" position="18">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="1611" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/com.dwijnand/sbt-compat/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.dwijnand/sbt-compat/scala_2.12/sbt_1.0/1.0.0/ivys/ivy.xml"/>
-				<caller organisation="org.ensime" name="sbt-ensime" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.5.1" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+		<module organisation="com.jsuereth" name="pgp-library_2.12">
+			<revision name="1.1.1" status="release" pubdate="20180305001551" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+				<metadata-artifact status="no" details="" size="1836" time="0" location="/home/giacomo/.ivy2/cache/com.jsuereth/pgp-library_2.12/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jsuereth/pgp-library_2.12/1.1.1/ivys/ivy.xml"/>
+				<caller organisation="com.jsuereth" name="sbt-pgp" conf="compile" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="1.1.1"/>
 				<artifacts>
-					<artifact name="sbt-compat" type="jar" ext="jar" status="no" details="" size="3727" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/com.dwijnand/sbt-compat/jars/sbt-compat-1.0.0.jar">
-						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.dwijnand/sbt-compat/scala_2.12/sbt_1.0/1.0.0/jars/sbt-compat.jar"/>
+					<artifact name="pgp-library_2.12" type="jar" ext="jar" status="no" details="" size="188159" time="0" location="/home/giacomo/.ivy2/cache/com.jsuereth/pgp-library_2.12/jars/pgp-library_2.12-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jsuereth/pgp-library_2.12/1.1.1/jars/pgp-library_2.12.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.scala-lang.modules" name="scala-xml_2.12">
-			<revision name="1.0.6" status="release" pubdate="20161101152105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12">
+			<revision name="1.0.5" status="release" pubdate="20161216145947" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="14">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="2987" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/ivy-1.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.pom"/>
-				<caller organisation="org.ensime" name="sbt-ensime" conf="default, compile, runtime, master" rev="1.0.6" rev-constraint-default="1.0.6" rev-constraint-dynamic="1.0.6" callerrev="2.5.1"/>
+				<metadata-artifact status="no" details="" size="2918" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/org.scala-lang.modules/scala-parser-combinators_2.12/1.0.5/ivys/ivy.xml"/>
+				<caller organisation="com.jsuereth" name="pgp-library_2.12" conf="compile" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="1.1.1"/>
+				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="0.2.2"/>
 				<artifacts>
-					<artifact name="scala-xml_2.12" type="bundle" ext="jar" status="no" details="" size="547860" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.jar"/>
+					<artifact name="scala-parser-combinators_2.12" type="bundle" ext="jar" status="no" details="" size="210060" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.5.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/org.scala-lang.modules/scala-parser-combinators_2.12/1.0.5/bundles/scala-parser-combinators_2.12.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.0.4" status="release" pubdate="20161028191045" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="runtime(*), master(compile), compile(*)" position="-1">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2918" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/org.scala-lang.modules/scala-parser-combinators_2.12/1.0.4/ivys/ivy.xml"/>
+				<evicted-by rev="1.0.5"/>
+				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="0.2.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.eed3si9n" name="gigahorse-okhttp_2.12">
+			<revision name="0.3.0" status="release" pubdate="20170427032416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/eed3si9n/gigahorse" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3125" time="0" location="/home/giacomo/.ivy2/cache/com.eed3si9n/gigahorse-okhttp_2.12/ivy-0.3.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.eed3si9n/gigahorse-okhttp_2.12/0.3.0/ivys/ivy.xml"/>
+				<caller organisation="com.jsuereth" name="pgp-library_2.12" conf="compile" rev="0.3.0" rev-constraint-default="0.3.0" rev-constraint-dynamic="0.3.0" callerrev="1.1.1"/>
+				<caller organisation="com.jsuereth" name="sbt-pgp" conf="compile" rev="0.3.0" rev-constraint-default="0.3.0" rev-constraint-dynamic="0.3.0" callerrev="1.1.1"/>
+				<artifacts>
+					<artifact name="gigahorse-okhttp_2.12" type="jar" ext="jar" status="no" details="" size="40267" time="0" location="/home/giacomo/.ivy2/cache/com.eed3si9n/gigahorse-okhttp_2.12/jars/gigahorse-okhttp_2.12-0.3.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.eed3si9n/gigahorse-okhttp_2.12/0.3.0/jars/gigahorse-okhttp_2.12.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.scalameta" name="sbt-metals">
-			<revision name="0.4.4" status="release" pubdate="20190202190821" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalameta/metals" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="15">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3395" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/org.scalameta/sbt-metals/ivy-0.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalameta/sbt-metals_2.12_1.0/0.4.4/sbt-metals-0.4.4.pom"/>
-				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="0.4.4" rev-constraint-default="0.4.4" rev-constraint-dynamic="0.4.4" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+		<module organisation="com.squareup.okhttp3" name="okhttp">
+			<revision name="3.7.0" status="release" pubdate="20170415215432" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5565" time="0" location="/home/giacomo/.ivy2/cache/com.squareup.okhttp3/okhttp/ivy-3.7.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.squareup.okhttp3/okhttp/3.7.0/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-okhttp_2.12" conf="default, compile, runtime, master" rev="3.7.0" rev-constraint-default="3.7.0" rev-constraint-dynamic="3.7.0" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="sbt-metals" type="jar" ext="jar" status="no" details="" size="15291" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/org.scalameta/sbt-metals/jars/sbt-metals-0.4.4.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalameta/sbt-metals_2.12_1.0/0.4.4/sbt-metals-0.4.4.jar"/>
+					<artifact name="okhttp" type="jar" ext="jar" status="no" details="" size="394987" time="0" location="/home/giacomo/.ivy2/cache/com.squareup.okhttp3/okhttp/jars/okhttp-3.7.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.squareup.okhttp3/okhttp/3.7.0/jars/okhttp.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="ch.epfl.scala" name="sbt-bloop">
-			<revision name="1.2.5" status="release" pubdate="20190123004248" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalacenter/bloop" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="1">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3100" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/ch.epfl.scala/sbt-bloop/ivy-1.2.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.2.5/sbt-bloop-1.2.5.pom"/>
-				<caller organisation="org.scalameta" name="sbt-metals" conf="default, compile, runtime, master" rev="1.2.5" rev-constraint-default="1.2.5" rev-constraint-dynamic="1.2.5" callerrev="0.4.4" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
-				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="1.2.5" rev-constraint-default="1.2.5" rev-constraint-dynamic="1.2.5" callerrev="0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
+		<module organisation="com.squareup.okio" name="okio">
+			<revision name="1.12.0" status="release" pubdate="20170411232017" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4329" time="0" location="/home/giacomo/.ivy2/cache/com.squareup.okio/okio/ivy-1.12.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.squareup.okio/okio/1.12.0/ivys/ivy.xml"/>
+				<caller organisation="com.squareup.okhttp3" name="okhttp" conf="compile, runtime" rev="1.12.0" rev-constraint-default="1.12.0" rev-constraint-dynamic="1.12.0" callerrev="3.7.0"/>
 				<artifacts>
-					<artifact name="sbt-bloop" type="jar" ext="jar" status="no" details="" size="81107" time="0" location="/home/giacomo/.ivy2/cache/scala_2.12/sbt_1.0/ch.epfl.scala/sbt-bloop/jars/sbt-bloop-1.2.5.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.2.5/sbt-bloop-1.2.5.jar"/>
+					<artifact name="okio" type="jar" ext="jar" status="no" details="" size="81088" time="0" location="/home/giacomo/.ivy2/cache/com.squareup.okio/okio/jars/okio-1.12.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.squareup.okio/okio/1.12.0/jars/okio.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="ch.epfl.scala" name="bloop-config_2.12">
-			<revision name="1.2.5" status="release" pubdate="20190123004210" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalacenter/bloop" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3339" time="0" location="/home/giacomo/.ivy2/cache/ch.epfl.scala/bloop-config_2.12/ivy-1.2.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/1.2.5/bloop-config_2.12-1.2.5.pom"/>
-				<caller organisation="ch.epfl.scala" name="sbt-bloop" conf="default, compile, runtime, master" rev="1.2.5" rev-constraint-default="1.2.5" rev-constraint-dynamic="1.2.5" callerrev="1.2.5"/>
+		<module organisation="com.eed3si9n" name="gigahorse-core_2.12">
+			<revision name="0.3.0" status="release" pubdate="20170427032410" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/eed3si9n/gigahorse" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3269" time="0" location="/home/giacomo/.ivy2/cache/com.eed3si9n/gigahorse-core_2.12/ivy-0.3.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.eed3si9n/gigahorse-core_2.12/0.3.0/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-okhttp_2.12" conf="default, compile, runtime, master" rev="0.3.0" rev-constraint-default="0.3.0" rev-constraint-dynamic="0.3.0" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="bloop-config_2.12" type="jar" ext="jar" status="no" details="" size="201789" time="0" location="/home/giacomo/.ivy2/cache/ch.epfl.scala/bloop-config_2.12/jars/bloop-config_2.12-1.2.5.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/1.2.5/bloop-config_2.12-1.2.5.jar"/>
+					<artifact name="gigahorse-core_2.12" type="jar" ext="jar" status="no" details="" size="166989" time="0" location="/home/giacomo/.ivy2/cache/com.eed3si9n/gigahorse-core_2.12/jars/gigahorse-core_2.12-0.3.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.eed3si9n/gigahorse-core_2.12/0.3.0/jars/gigahorse-core_2.12.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="io.circe" name="circe-derivation_2.12">
-			<revision name="0.9.0-M3" status="release" pubdate="20180402153423" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe-derivation" extra-info.apiURL="https://circe.github.io/circe-derivation/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
-				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3288" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-derivation_2.12/ivy-0.9.0-M3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-derivation_2.12/0.9.0-M3/circe-derivation_2.12-0.9.0-M3.pom"/>
-				<caller organisation="ch.epfl.scala" name="bloop-config_2.12" conf="compile, runtime" rev="0.9.0-M3" rev-constraint-default="0.9.0-M3" rev-constraint-dynamic="0.9.0-M3" callerrev="1.2.5"/>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.25" status="release" pubdate="20170316123632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5188" time="0" location="/home/giacomo/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-core_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="circe-derivation_2.12" type="jar" ext="jar" status="no" details="" size="67548" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-derivation_2.12/jars/circe-derivation_2.12-0.9.0-M3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-derivation_2.12/0.9.0-M3/circe-derivation_2.12-0.9.0-M3.jar"/>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="/home/giacomo/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/jars/slf4j-api.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="io.circe" name="circe-parser_2.12">
-			<revision name="0.9.3" status="release" pubdate="20180328032252" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
-				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3079" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-parser_2.12/ivy-0.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.3/circe-parser_2.12-0.9.3.pom"/>
-				<caller organisation="ch.epfl.scala" name="bloop-config_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="1.2.5"/>
+		<module organisation="org.reactivestreams" name="reactive-streams">
+			<revision name="1.0.0" status="release" pubdate="20150615233204" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<license name="CC0" url="http://creativecommons.org/publicdomain/zero/1.0/"/>
+				<metadata-artifact status="no" details="" size="2386" time="0" location="/home/giacomo/.ivy2/cache/org.reactivestreams/reactive-streams/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/org.reactivestreams/reactive-streams/1.0.0/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-core_2.12" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="circe-parser_2.12" type="jar" ext="jar" status="no" details="" size="2752" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-parser_2.12/jars/circe-parser_2.12-0.9.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.3/circe-parser_2.12-0.9.3.jar"/>
+					<artifact name="reactive-streams" type="jar" ext="jar" status="no" details="" size="2042" time="0" location="/home/giacomo/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="io.circe" name="circe-jawn_2.12">
-			<revision name="0.9.3" status="release" pubdate="20180328032202" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
-				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3081" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-jawn_2.12/ivy-0.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.3/circe-jawn_2.12-0.9.3.pom"/>
-				<caller organisation="io.circe" name="circe-parser_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="0.9.3"/>
+		<module organisation="com.typesafe" name="ssl-config-core_2.12">
+			<revision name="0.2.2" status="release" pubdate="20170308093931" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2990" time="0" location="/home/giacomo/.ivy2/cache/com.typesafe/ssl-config-core_2.12/ivy-0.2.2.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.typesafe/ssl-config-core_2.12/0.2.2/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-core_2.12" conf="compile, runtime" rev="0.2.2" rev-constraint-default="0.2.2" rev-constraint-dynamic="0.2.2" callerrev="0.3.0"/>
 				<artifacts>
-					<artifact name="circe-jawn_2.12" type="jar" ext="jar" status="no" details="" size="12362" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-jawn_2.12/jars/circe-jawn_2.12-0.9.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.3/circe-jawn_2.12-0.9.3.jar"/>
+					<artifact name="ssl-config-core_2.12" type="bundle" ext="jar" status="no" details="" size="243552" time="0" location="/home/giacomo/.ivy2/cache/com.typesafe/ssl-config-core_2.12/bundles/ssl-config-core_2.12-0.2.2.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.typesafe/ssl-config-core_2.12/0.2.2/bundles/ssl-config-core_2.12.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.spire-math" name="jawn-parser_2.12">
-			<revision name="0.11.1" status="release" pubdate="20180127004135" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
-				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="2879" time="0" location="/home/giacomo/.ivy2/cache/org.spire-math/jawn-parser_2.12/ivy-0.11.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.1/jawn-parser_2.12-0.11.1.pom"/>
-				<caller organisation="io.circe" name="circe-jawn_2.12" conf="compile, runtime" rev="0.11.1" rev-constraint-default="0.11.1" rev-constraint-dynamic="0.11.1" callerrev="0.9.3"/>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.2.0" status="release" pubdate="20140115100944" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2867" time="0" location="/home/giacomo/.ivy2/cache/com.typesafe/config/ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/com.typesafe/config/1.2.0/ivys/ivy.xml"/>
+				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.2.2"/>
 				<artifacts>
-					<artifact name="jawn-parser_2.12" type="jar" ext="jar" status="no" details="" size="76101" time="0" location="/home/giacomo/.ivy2/cache/org.spire-math/jawn-parser_2.12/jars/jawn-parser_2.12-0.11.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.1/jawn-parser_2.12-0.11.1.jar"/>
+					<artifact name="config" type="bundle" ext="jar" status="no" details="" size="217897" time="0" location="/home/giacomo/.ivy2/cache/com.typesafe/config/bundles/config-1.2.0.jar">
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/com.typesafe/config/1.2.0/bundles/config.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="io.circe" name="circe-core_2.12">
-			<revision name="0.9.3" status="release" pubdate="20180328032159" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
-				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3080" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-core_2.12/ivy-0.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.3/circe-core_2.12-0.9.3.pom"/>
-				<caller organisation="io.circe" name="circe-parser_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="0.9.3"/>
-				<caller organisation="io.circe" name="circe-jawn_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="0.9.3"/>
-				<caller organisation="io.circe" name="circe-derivation_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="0.9.0-M3"/>
+		<module organisation="org.bouncycastle" name="bcpg-jdk15on">
+			<revision name="1.51" status="release" pubdate="20140728045411" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
+				<license name="Apache Software License, Version 1.1" url="http://www.apache.org/licenses/LICENSE-1.1"/>
+				<metadata-artifact status="no" details="" size="3005" time="0" location="/home/giacomo/.ivy2/cache/org.bouncycastle/bcpg-jdk15on/ivy-1.51.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcpg-jdk15on/1.51/bcpg-jdk15on-1.51.pom"/>
+				<caller organisation="com.jsuereth" name="pgp-library_2.12" conf="compile" rev="1.51" rev-constraint-default="1.51" rev-constraint-dynamic="1.51" callerrev="1.1.1"/>
 				<artifacts>
-					<artifact name="circe-core_2.12" type="jar" ext="jar" status="no" details="" size="888906" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-core_2.12/jars/circe-core_2.12-0.9.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.3/circe-core_2.12-0.9.3.jar"/>
+					<artifact name="bcpg-jdk15on" type="jar" ext="jar" status="no" details="" size="255692" time="0" location="/home/giacomo/.ivy2/cache/org.bouncycastle/bcpg-jdk15on/jars/bcpg-jdk15on-1.51.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcpg-jdk15on/1.51/bcpg-jdk15on-1.51.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.typelevel" name="cats-core_2.12">
-			<revision name="1.0.1" status="release" pubdate="20171231134951" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
-				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="3339" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-core_2.12/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1.pom"/>
-				<caller organisation="io.circe" name="circe-core_2.12" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.9.3"/>
+		<module organisation="org.bouncycastle" name="bcprov-jdk15on">
+			<revision name="1.51" status="release" pubdate="20140728035910" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
+				<metadata-artifact status="no" details="" size="2676" time="0" location="/home/giacomo/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/ivy-1.51.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.51/bcprov-jdk15on-1.51.pom"/>
+				<caller organisation="org.bouncycastle" name="bcpg-jdk15on" conf="default, compile, runtime, master" rev="1.51" rev-constraint-default="1.51" rev-constraint-dynamic="1.51" callerrev="1.51"/>
 				<artifacts>
-					<artifact name="cats-core_2.12" type="jar" ext="jar" status="no" details="" size="3837683" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.typelevel" name="cats-kernel_2.12">
-			<revision name="1.0.1" status="release" pubdate="20171231134830" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
-				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="2777" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-kernel_2.12/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1.pom"/>
-				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
-				<artifacts>
-					<artifact name="cats-kernel_2.12" type="jar" ext="jar" status="no" details="" size="3144953" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.typelevel" name="cats-macros_2.12">
-			<revision name="1.0.1" status="release" pubdate="20171231134800" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
-				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="2923" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-macros_2.12/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1.pom"/>
-				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
-				<artifacts>
-					<artifact name="cats-macros_2.12" type="jar" ext="jar" status="no" details="" size="6153" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.typelevel" name="machinist_2.12">
-			<revision name="0.6.2" status="release" pubdate="20170601052738" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/typelevel/machinist" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
-				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="2785" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/machinist_2.12/ivy-0.6.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.2/machinist_2.12-0.6.2.pom"/>
-				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="0.6.2" rev-constraint-default="0.6.2" rev-constraint-dynamic="0.6.2" callerrev="1.0.1"/>
-				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="0.6.2" rev-constraint-default="0.6.2" rev-constraint-dynamic="0.6.2" callerrev="1.0.1"/>
-				<artifacts>
-					<artifact name="machinist_2.12" type="jar" ext="jar" status="no" details="" size="33650" time="0" location="/home/giacomo/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.2/machinist_2.12-0.6.2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="io.circe" name="circe-numbers_2.12">
-			<revision name="0.9.3" status="release" pubdate="20180328032118" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
-				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2798" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-numbers_2.12/ivy-0.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.3/circe-numbers_2.12-0.9.3.pom"/>
-				<caller organisation="io.circe" name="circe-core_2.12" conf="compile, runtime" rev="0.9.3" rev-constraint-default="0.9.3" rev-constraint-dynamic="0.9.3" callerrev="0.9.3"/>
-				<artifacts>
-					<artifact name="circe-numbers_2.12" type="jar" ext="jar" status="no" details="" size="13911" time="0" location="/home/giacomo/.ivy2/cache/io.circe/circe-numbers_2.12/jars/circe-numbers_2.12-0.9.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.3/circe-numbers_2.12-0.9.3.jar"/>
+					<artifact name="bcprov-jdk15on" type="jar" ext="jar" status="no" details="" size="2842667" time="0" location="/home/giacomo/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/jars/bcprov-jdk15on-1.51.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.51/bcprov-jdk15on-1.51.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.7" status="release" pubdate="20180927103542" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.7/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+			<revision name="2.12.7" status="release" pubdate="20180927043542" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.7/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="3">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2471" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom"/>
-				<caller organisation="org.ensime" name="sbt-ensime" conf="default, compile, runtime, master" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="2.5.1"/>
-				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.0.1"/>
-				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.0.1"/>
-				<caller organisation="io.circe" name="circe-parser_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.9.3"/>
-				<caller organisation="io.circe" name="circe-core_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.9.3"/>
-				<caller organisation="io.circe" name="circe-numbers_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.9.3"/>
-				<caller organisation="io.circe" name="circe-derivation_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.9.0-M3"/>
-				<caller organisation="org.scala-lang.modules" name="scala-xml_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.0.6"/>
-				<caller organisation="org.spire-math" name="jawn-parser_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.11.1"/>
-				<caller organisation="ch.epfl.scala" name="bloop-config_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.2.5"/>
-				<caller organisation="org.typelevel" name="cats-kernel_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.0.1"/>
-				<caller organisation="io.circe" name="circe-jawn_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.9.3"/>
-				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.6.2"/>
-				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="2.12.7"/>
+				<metadata-artifact status="no" details="" size="2640" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.7.xml" searched="false" origin-is-local="false" origin-location="file:////home/giacomo/.sbt/preloaded/org.scala-lang/scala-library/2.12.7/ivys/ivy.xml"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-core_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.3.0"/>
+				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12" conf="default, compile, runtime, master" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.0.5"/>
+				<caller organisation="com.jsuereth" name="pgp-library_2.12" conf="compile" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="1.1.1"/>
+				<caller organisation="com.eed3si9n" name="gigahorse-okhttp_2.12" conf="default, compile, runtime, master" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.3.0"/>
+				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="2.12.7" rev-constraint-default="2.12.7" rev-constraint-dynamic="2.12.7" callerrev="0.2.2"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5277511" time="0" location="/home/giacomo/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.7.jar">
-						<origin-location is-local="false" location="UNKNOWN"/>
+						<origin-location is-local="false" location="file:////home/giacomo/.sbt/preloaded/org.scala-lang/scala-library/2.12.7/jars/scala-library.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
